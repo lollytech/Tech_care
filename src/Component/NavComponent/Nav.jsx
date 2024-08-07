@@ -11,7 +11,7 @@ import { GrMoreVertical } from "react-icons/gr";
 
 function Nav() {
   return (
-      <div className='  w-full h-[6rem] flex bg-white rounded-full mt-8  p-4 justify-center items-center max-w-[100rem]  '>
+      <div className='  w-full h-[6rem] flex bg-white rounded-full mt-8  p-4 justify-between gap-24 items-center max-w-[100rem]  '>
         
         <div className=' w-full  '>
           <img className='' src={TechLogo} alt="" />
@@ -45,7 +45,7 @@ function Nav() {
           </div>
          
         </div>
-        <div className=' w-full '>
+        <div className=' w-full gap-3 '>
           <div className=' flex  gap-2'>
             <img className= 'rounded-full' src={DrJose} alt="" />
             <span className=' border-r-2'>
