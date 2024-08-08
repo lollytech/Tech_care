@@ -27,9 +27,9 @@ function Nav() {
             </div>
           </span>
        
-          <div className=' flex  gap-2'>
+          <div className=' flex  gap-2 bg-[#01f0d0] h-7 rounded-lg'>
             <RiGroupFill className=' text-xl' />
-            <p className=' font-bold'>Patients</p>
+            <p className=' font-bold '>Patients</p>
           </div>
           <div className=' flex  gap-2'>
             <MdOutlineCalendarToday className=' text-xl' />
