@@ -8,24 +8,30 @@ import Heart from "../../Assests/HeartBPM.png";
 import Temprature from "../../Assests/temperature.png"
 import Labresult from './Labresult';
 import Patients from './Patients';
+import PatientsDetail from './PatientsDetail'
 
 
-function MainLayouts() {
-  
+
+function MainLayouts({}) {
+  const [selectedPatient, setSelectedPatient] = useState(null);
+
+  const handlePatientClick = (patient) => {
+    setSelectedPatient(patient);
+  };
+
 
   return (
     <main className="grid grid-cols-4 gap-4 p-24 h-full w-full">
-      <aside className=" bg-white p-4 w-[22rem] flex flex-col indent-0">
-        <div className="head flex gap-44 mb-2">
+      <aside className=" bg-white p-4 w-[22rem] rounded-3xl  flex flex-col">
+        <div className=" flex gap-44 mb-2">
         <p className=' font-bold text-xl'>Patients</p>
          <IoMdSearch className=' text-xl' />
         </div>
-        
-        <Patients />
+        <Patients onPatientClick={handlePatientClick} />
       </aside>
 
       <div className="col-span-3 grid grid-cols-3 gap-14 h-full">
-        <section className="bg-white p-4 border col-span-2  ">
+        <section className="bg-white p-4 rounded-3xl  col-span-2  ">
           <div>
           <h1 className=' font-bold ml-4 pt-4 text-xl'>Diagnosis History</h1>
           </div>
@@ -113,10 +119,14 @@ function MainLayouts() {
             </div>
         </section>
 
-        <section className="bg-gray-100 p-4 border ">Section 2</section>
+        <section className="bg-white p-4 rounded-3xl   ">
+          <div className=' '>
+            <PatientsDetail patient={selectedPatient} />
+          </div>
+        </section>
 
-        <section className="bg-gray-100 p-4 border col-span-2">
-          <div className=' bg-white'>
+        <section className="bg-white p-4 rounded-3xl col-span-2">
+          <div className=''>
             <div>
             <h1 className=' font-bold ml-4 pt-4 text-xl'>Daignosis List</h1>
             </div>
@@ -125,7 +135,7 @@ function MainLayouts() {
               <p className=' text-sm w-1/2 '>Description</p>
               <p className=' text-sm w-1/2'>Status</p>
             </div>
-            <div  className=' max-h-24 overflow-y-auto'>
+            <div  className=' max-h-24 overflow-y-auto scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-black scrollbar-thumb-rounded-lg'>
             <div className=' mt-2 ml-12 flex gap-3 justify-between   '>
               <p className=' text-sm w-1/4'>Hypertension</p>
               <p className=' text-sm w-1/2'>Chronic high blood pressure</p>
@@ -166,7 +176,7 @@ function MainLayouts() {
           </div>
         </section>
 
-        <section>
+        <section className=' rounded-3xl bg-white'>
         <div>
           <Labresult/>
         </div>
