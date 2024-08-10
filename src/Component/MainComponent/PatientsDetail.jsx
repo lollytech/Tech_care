@@ -7,7 +7,7 @@ import { AiOutlineInsurance } from "react-icons/ai";
 function PatientsDetail({patient}) {
   
   if (!patient) {
-    return <p>Loading...</p>;
+    return <p>Select patient...</p>;
   }
 
   return (

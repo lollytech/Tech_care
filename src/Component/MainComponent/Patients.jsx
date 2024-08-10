@@ -40,7 +40,7 @@ function Patients({ onPatientClick }) {
   }
 
   return (
-    <div className="flex">
+    <div className="">
       <Patientlist 
         PatientInfos={PatientInfos} 
         onPatientClick={onPatientClick}  

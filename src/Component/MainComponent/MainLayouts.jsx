@@ -22,7 +22,7 @@ function MainLayouts({}) {
 
   return (
     <main className="grid grid-cols-4 gap-4 p-24 h-full w-full">
-      <aside className=" bg-white p-4 w-[22rem] rounded-3xl  flex flex-col">
+      <aside className=" bg-white p-4 w-[22rem] rounded-3xl  flex-col">
         <div className=" flex gap-44 mb-2">
         <p className=' font-bold text-xl'>Patients</p>
          <IoMdSearch className=' text-xl' />
@@ -76,7 +76,7 @@ function MainLayouts({}) {
             </div>
             </div>
           </div>
-          <div className=' flex-wrap gap-20 pt-4 flex'>
+          <div className=' flex-wrap gap-7 max-md:gap-20 pt-4 flex'>
               <div className=' bg-[#E0f3fa] w-[13rem] rounded-3xl'> 
                 <div className=' ml-6 mt-5'>
                   <img className=' rounded-full' src={Repository} alt="" />

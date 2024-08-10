@@ -27,7 +27,7 @@ function Nav() {
             </div>
           </span>
        
-          <div className=' flex  gap-2 bg-[#01f0d0] h-7 rounded-lg'>
+          <div className=' flex  gap-2 bg-[#01f0d0] h-7 rounded-lg cursor-pointer'>
             <RiGroupFill className=' text-xl' />
             <p className=' font-bold '>Patients</p>
           </div>

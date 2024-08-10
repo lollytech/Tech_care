@@ -16,7 +16,7 @@ function Labresult() {
         <div>
           <h1 className='font-bold ml-4 pt-4 text-xl'>Lab Results</h1>
         </div>
-        <div className="h-32 overflow-y-auto">
+        <div className="h-32 overflow-y-auto scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-black scrollbar-thumb-rounded-lg">
           {labResults.map((result) => (
             <div key={result.id} className='h-8 p-3 m-3 flex items-center justify-between'>
               <p className='text-sm'>{result.name}</p>
